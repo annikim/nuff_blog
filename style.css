@@ -9,15 +9,14 @@ html {
   
 body{
     overflow-x: hidden;
-    margin: 0;
     padding: 0;
     color: #011627;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;  
     height: 100vh; /* Ensure the body covers the entire viewport height */
     margin: 0; /* Remove default body margin */
+    justify-content: center;
+    align-items: center;
 }
 
 div{
@@ -25,7 +24,9 @@ div{
   position:absolute;
 }
 
-  /*****************************************************************/
+/*****************************************************************/
+/****                  HOME PAGE                          ********/
+/*****************************************************************/
 .buttoncontainer{
   text-align: center;
   justify-content: center;
@@ -82,56 +83,3 @@ div{
   right: 0;
 }
 
-/*************************************************************************/
-/*articles.html styling**********************************************/
-/*************************************************************************/
-a.homeImageButton{
-  top: 20px;
-  left: 30px;
-  position: absolute;
-  cursor: pointer;
-  display: inline-block;
-  z-index: 1;
-}
-
-#homeImage{
-  width: 80px;
-  height: auto;
-  --g: 2px;     /* the gap */
-  --b: 2.3px;    /* border thickness*/
-  --c: #669706; /* the color */
-  padding: calc(var(--g) + var(--b));
-  --_c: #0000 0 25%, var(--c) 0 50%;
-  --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
-  --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
-  background:
-    var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
-    var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
-  background-size: 200% var(--b),var(--b) 200%;
-  cursor: pointer;
-  filter: grayscale(50%);
-  transition: .3s;
-}
-
-#homeImage:hover{
-  --_p: 75%;
-  filter: grayscale(0%);
-}
-
-
-#backToTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 5%;
-  right: 5%;
-  z-index: 1;
-  background-color: rgb(198, 190, 190);
-  color: #011627;
-  border: none;
-  padding: 0.8% 0.8%;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 16px;
-  font-family: 'Times New Roman', Times, serif;
-  transition: opacity 0.5s ease-in-out;
-}
