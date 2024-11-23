@@ -4,148 +4,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> nuff said </title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>nuff said</title>
+  <link href="CSS/style.css" rel="stylesheet" type="text/css" />
 
-<!--jquery-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<!--import js file-->
-<script src="script.js"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Import JS file -->
+  <script src="JS/script.js" defer></script>
 </head>
-
 
 <body>
 
+  <!-- Heading Container -->
+  <div class="heading-container">
+    <!-- Header Cover (Not a Link) -->
+    <img src="IMAGES/header2.jpeg" class="cover" id="headercover" alt="Header Cover Image">
 
-  <div class="container">
-    
-  <h1><span>nuff said</span></h1>  
-   
-    
-    <div class="blobs_1"></div>
-    <div class="blobs_2"></div>
-    <div class="blobs_3"></div>
-    <div class="blobs_4"></div>
-    <div class="blobs_5"></div>
-    <div class="blobs_6"></div>
-    <div class="blobs_7"></div>
+    <!-- Category Covers (Clickable Links) -->
+    <a href="CATEGORIES/COLLEGE/collegeoverview.html" class="cover-link" id="collegelink">
+      <img src="IMAGES/collegecover.jpeg" class="cover default" alt="College Cover">
+      <img src="IMAGES/collegecover-hover.jpeg" class="cover hover" alt="College Cover Hover">
+    </a>
+    <a href="CATEGORIES/FITNESS/fitnessoverview.html" class="cover-link" id="fitnesslink">
+      <img src="IMAGES/fitnesscover.jpeg" class="cover default" alt="Fitness Cover">
+      <img src="IMAGES/fitnesscover-hover.jpeg" class="cover hover" alt="Fitness Cover Hover">
+    </a>
+    <a href="CATEGORIES/KOREA/koreaoverview.html" class="cover-link" id="korealink">
+      <img src="IMAGES/koreacover.jpeg" class="cover default" alt="Korea Cover">
+      <img src="IMAGES/koreacover-hover.jpeg" class="cover hover" alt="Korea Cover Hover">
+    </a>
+    <a href="CATEGORIES/SELF/selfoverview.html" class="cover-link" id="selflink">
+      <img src="IMAGES/selfcover.jpeg" class="cover default" alt="Self Cover">
+      <img src="IMAGES/selfcover-hover.jpeg" class="cover hover" alt="Self Cover Hover">
+    </a>
+    <a href="CATEGORIES/NUTRITION/nutritionoverview.html" class="cover-link" id="nutritionlink">
+      <img src="IMAGES/nutritioncover.jpeg" class="cover default" alt="Nutrition Cover">
+      <img src="IMAGES/nutritioncover-hover.jpeg" class="cover hover" alt="Nutrition Cover Hover">
+    </a>
   </div>
-
-<style>
-  .container{
-  width:320px;
-  height:320px;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%)
-  }
-
-h1{
-  background:#fff;
-  width:100%;
-  height:100%;
-  margin: 0;
-  padding:0;
-  display:flex;
-  font-family: 'Times New Roman', Times, serif;
-  font-size:90px;
-  flex-flow:row wrap;
-  align-content:center;
-  justify-content:center
-  }
-
-h1 span{width:100%;position:relative}
-
-h1 span:before{
-  background:linear-gradient(45deg,#073f05, #789461,#684b08) ;
-  margin: 0;
-  width:100%;
-  height:100%;
-  display:block;
-  position:absolute;
-  content:"";
-  mix-blend-mode:screen
-  }
-
-[class*="blobs"]
-  {mix-blend-mode:color;animation:blobs 15s ease-in-out infinite alternate}
-
-.blobs_1{
-  background: #b4dab3;
-  width:60px;
-  height:60px;
-  top:90px;
-  left:210px
-  }
-
-.blobs_2{
-  background:#84be81;
-  width:80px;
-  height:80px;
-  top:155px;
-  left:230px
-  }
-
-.blobs_3{
-  background:#90d86dea;
-  width:60px;
-  height:60px;
-  top:145px;
-  left:20px;
-  }
-
-.blobs_4{
-  background:rgb(194, 225, 194);
-  width:100px;
-  height:100px;
-  top:115px;
-  left:100px;
-  }
-
-.blobs_5{
-  background:#074b14f4;
-  width:50px;
-  height:50px;
-  top:55px;
-  left:70px
-  }
-
-.blobs_6{
-  background:#0e3905;
-  width:60px;
-  height:60px;
-  top:220px;
-  left:55px
-  }
-
-.blobs_7{
-  background:rgb(61, 32, 4);
-  width:50px;
-  height:50px;
-  top:210px;
-  left:180px
-  }
-
-@keyframes blobs{
-  0%{border-radius:26% 74% 61% 39% / 54% 67% 33% 46%}
-  10%{border-radius:74% 26% 47% 53% / 68% 46% 54% 32%}
-  20%{border-radius:48% 52% 30% 70% / 27% 37% 63% 73%}
-  30%{border-radius:73% 27% 57% 43% / 28% 67% 33% 72%}
-  40%{border-radius:63% 37% 56% 44% / 25% 28% 72% 75%}
-  50%{border-radius:39% 61% 70% 30% / 61% 29% 71% 39%}
-  60%{border-radius:27% 73% 29% 71% / 73% 51% 49% 27%}
-  70%{border-radius:39% 61% 65% 35% / 74% 65% 35% 26%}
-  80%{border-radius:55% 45% 37% 63% / 38% 30% 70% 62%}
-  90%{border-radius:25% 75% 70% 30% / 39% 50% 50% 61%}
-  100%{border-radius:66% 34% 33% 67% / 65% 73% 27% 35%}
-  }
-
-</style>
-
-    <div class="buttoncontainer">
-    <button onclick="location.href='articles.html';" id="articlesButton"><span>explore more</span></button>
-    </div>
-
 
 </body>
 

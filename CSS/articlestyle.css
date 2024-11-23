@@ -1,0 +1,30 @@
+body {
+  background-image: url('../IMAGES/paperbackground.jpeg');
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden; /* Prevents scrolling if content overflows */
+   
+  }
+  
+/* Home Button Container */
+.homebutton-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  margin-top: 20px; /* Space from the top */
+}
+
+/* Home Button Styling */
+.homebutton {
+  width: 100px; /* Adjust to desired size */
+  height: auto; /* Maintains aspect ratio */
+  cursor: pointer;
+}
+
+h1{
+  font-family:'Times New Roman', Times, serif;
+  display: flex;
+
+}
+

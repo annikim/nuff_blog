@@ -1,0 +1,119 @@
+/* Background settings for the body */
+body {
+  background-image: url('../IMAGES/paperbackground.jpeg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden; /* Prevents scrolling if content overflows */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Wrapper for the heading and covers */
+.heading-container {
+  position: relative;
+  width: 800px; /* Fixed width */
+  height: 800px; /* Fixed height */
+  margin: 0 auto; /* Center horizontally */
+  border-radius: 50%; /* Maintains circular boundary */
+  overflow: hidden; /* Ensures child elements don't overflow the container */
+}
+
+/* Center the header and make it larger */
+#headercover {
+  position: absolute;
+  z-index: 2; /* Keeps the header on top */
+  width: 360px; /* Fixed width */
+  height: auto; /* Maintains aspect ratio */
+  top: 50%; /* Centers vertically */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%); /* Centers the image precisely */
+}
+
+/* Covers in fixed positions */
+.cover {
+  width: 130px; /* Fixed width */
+  height: 130px; /* Fixed height to maintain square aspect ratio */
+  object-fit: cover;
+}
+
+/* Clickable Cover Links */
+.cover-link {
+  position: absolute; /* Position the link absolutely within the container */
+  width: 130px; /* Match the cover image width */
+  height: 130px; /* Match the cover image height */
+  text-decoration: none; /* Remove underline from links */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+  z-index: 3; /* Ensure links are above the headercover */
+}
+
+/* Ensure images inside links fill the links */
+.cover-link img {
+  display: block; /* Remove any inline spacing */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hide hover images by default */
+.cover-link img.hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height to maintain square aspect ratio */
+}
+
+/* Show hover image on hover */
+.cover-link:hover img.hover {
+  opacity: 1;
+}
+
+/* Hide default image on hover */
+.cover-link:hover img.default {
+  opacity: 0;
+}
+
+/* Specific placements for the cover links */
+
+/* College Cover Link */
+#collegelink {
+  top: 140px; /* Fixed position from the top */
+  left: 240px; /* Fixed position from the left */
+  transform: translate(-50%, 0); /* Adjust alignment */
+}
+
+/* Fitness Cover Link */
+#fitnesslink {
+  top: 200px; /* Fixed position from the top */
+  left: 520px; /* Fixed position from the left */
+  transform: translate(-50%, -50%); /* Adjust alignment */
+}
+
+/* Korea Cover Link */
+#korealink {
+  bottom: 160px; /* Fixed position from the bottom */
+  left: 384px; /* Fixed position from the left */
+  transform: translate(-50%, 0); /* Adjust alignment */
+}
+
+/* Self Cover Link */
+#selflink {
+  top: 380px; /* Fixed position from the top */
+  left: 120px; /* Fixed position from the left */
+  transform: translate(-50%, -50%); /* Adjust alignment */
+}
+
+/* Nutrition Cover Link */
+#nutritionlink {
+  bottom: 240px; /* Fixed position from the bottom */
+  left: 648px; /* Fixed position from the left */
+  transform: translate(-50%, -50%); /* Adjust alignment */
+}
