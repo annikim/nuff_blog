@@ -1,6 +1,6 @@
 /* Background settings for the body */
 body {
-  background-image: url('../IMAGES/paperbackground.jpeg'); 
+  background-image: url('../images/paperbackground.jpeg'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

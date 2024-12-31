@@ -1,5 +1,5 @@
 body {
-  background-image: url('../IMAGES/paperbackground.jpeg');
+  background-image: url('../images/paperbackground.jpeg');
   background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -25,6 +25,6 @@ body {
 h1{
   font-family:'Times New Roman', Times, serif;
   display: flex;
-
+  
 }
 
