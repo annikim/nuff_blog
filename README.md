@@ -1,4 +1,4 @@
 # nuff_blog
 Transcribed Versions of Nuff Youtube Videos
 
-<img width="803" alt="Screenshot 2024-02-21 at 3 54 55 PM" src="https://github.com/annikim/nuff_blog/assets/104855419/187fce5c-a7cc-4ce8-b915-6b0b9c3a64fe">
+<img width="989" alt="Screenshot 2024-12-31 at 11 43 10 AM" src="https://github.com/user-attachments/assets/abb8dfce-e0ad-4479-b1f2-27c8fec19426" />
