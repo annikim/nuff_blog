@@ -24,8 +24,8 @@ body {
 
 @font-face {
   font-family: 'annis handwriting';
-  src: url('CSS/fonts/annishandwritingRegular.woff2') format('woff2'),
-      url('CSS/fonts/annishandwritingRegular.woff') format('woff');
+  src: url('fonts/annishandwritingRegular.woff2') format('woff2'),
+      url('fonts/annishandwritingRegular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -33,8 +33,8 @@ body {
 
 @font-face {
   font-family: 'Reenie Beanie';
-  src: url('CSS/fonts/ReenieBeanie.woff2') format('woff2'),
-      url('CSS/fonts/ReenieBeanie.woff') format('woff');
+  src: url('fonts/ReenieBeanie.woff2') format('woff2'),
+      url('fonts/ReenieBeanie.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -42,11 +42,11 @@ body {
 
 
 body {
-  font-family: 'Reenie Beanie', 'annis handwriting' cursive;
+  font-family: 'Reenie Beanie', 'annis handwriting', cursive;
 }
 
 h1{
-  font-family: 'Reenie Beanie', 'annis handwriting' cursive;
+  font-family: 'Reenie Beanie', 'annis handwriting', cursive;
   font-weight: bold;
   display: flex;
   justify-content: center;
