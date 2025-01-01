@@ -22,34 +22,100 @@ body {
   cursor: pointer;
 }
 
+/*FONTS******************************************************************/
 @font-face {
-  font-family: 'annis handwriting';
-  src: url('fonts/annishandwritingRegular.woff2') format('woff2'),
-      url('fonts/annishandwritingRegular.woff') format('woff');
+  font-family: 'oliver';
+  src: url('fonts/Oliver-Regular.woff2') format('woff2'),
+      url('fonts/Oliver-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'geologica';
+  src: url('fonts/Geologica-Regular.woff2') format('woff2'),
+      url('fonts/Geologica-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Reenie Beanie';
-  src: url('fonts/ReenieBeanie.woff2') format('woff2'),
-      url('fonts/ReenieBeanie.woff') format('woff');
+  font-family: 'winkle';
+  src: url('fonts/Winkle-Regular.woff2') format('woff2'),
+      url('fonts/Winkle-Regular.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
+/*********************************************************************************/
 
 
 body {
-  font-family: 'Reenie Beanie', 'annis handwriting', cursive;
+  font-family: 'winkle', 'annis handwriting', cursive;
+  font-size: 20px;
 }
 
 h1{
-  font-family: 'Reenie Beanie', 'annis handwriting', cursive;
+  font-family: 'oliver', 'winkle', 'annis handwriting', cursive;
+  font-size: 30px;
   font-weight: bold;
   display: flex;
   justify-content: center;
-  padding: 10px;
 }
 
+/*ARTICLE LIST STYLING**************************************************/
+.articlelist {
+  justify-content: center;
+  list-style-type: none; /* Removes bullets */
+  padding: 0;
+  margin: 0 auto; /* Center the list */
+  text-align: center; /* Center-align the text */
+}
+
+.articlelist li {
+  margin: 10px 0; /* spacing between items */
+}
+
+.articlelist a {
+  text-decoration: none; 
+  color: rgb(39, 38, 38); 
+}
+
+.articlelist a:hover {
+  color: #45a95f; 
+  text-decoration: underline; 
+  cursor: pointer;
+  transition: width 0.3s ease;
+}
+
+
+/*BACK LINK STYLING**************************************************/
+.back-link {
+  text-decoration: none; 
+  color: black; 
+  font-size: 18px; 
+  position: relative; /* Required for the ::after pseudo-element */
+  transition: color 0.3s ease; 
+  margin-left: 70px;
+}
+
+/* Line transition effect */
+.back-link::after {
+  content: ''; /* Creates the line */
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust the line position */
+  width: 0; /* Hidden by default */
+  height: 2px; /* Thickness of the line */
+  transition: width 0.3s ease; /* Smooth width transition */
+}
+
+/* Hover effect for the link */
+.back-link:hover {
+  color: #69b985; /* Darken the color on hover */
+}
+
+.back-link:hover::after {
+  width: 100%; /* Expand the line on hover */
+}
