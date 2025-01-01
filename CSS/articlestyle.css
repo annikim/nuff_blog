@@ -8,7 +8,7 @@ body {
   }
   
 /* Home Button Container */
-.homebutton-container {
+.homebutton-container { 
   width: 100%;
   display: flex;
   justify-content: center; /* Centers horizontally */
@@ -22,9 +22,34 @@ body {
   cursor: pointer;
 }
 
+@font-face {
+  font-family: 'annis handwriting';
+  src: url('CSS/fonts/annishandwritingRegular.woff2') format('woff2'),
+      url('CSS/fonts/annishandwritingRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Reenie Beanie';
+  src: url('CSS/fonts/ReenieBeanie.woff2') format('woff2'),
+      url('CSS/fonts/ReenieBeanie.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body {
+  font-family: 'Reenie Beanie', 'annis handwriting' cursive;
+}
+
 h1{
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'Reenie Beanie', 'annis handwriting' cursive;
+  font-weight: bold;
   display: flex;
-  
+  justify-content: center;
+  padding: 10px;
 }
 

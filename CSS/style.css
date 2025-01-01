@@ -36,19 +36,19 @@ body {
 
 /* Covers in fixed positions */
 .cover {
-  width: 130px; /* Fixed width */
-  height: 130px; /* Fixed height to maintain square aspect ratio */
-  object-fit: cover;
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height to maintain square aspect ratio */
+  object-fit: contain;
 }
 
 /* Clickable Cover Links */
 .cover-link {
   position: absolute; /* Position the link absolutely within the container */
-  width: 130px; /* Match the cover image width */
-  height: 130px; /* Match the cover image height */
+  width: 150px; /* Match the cover image width */
+  height: 150px; /* Match the cover image height */
   text-decoration: none; /* Remove underline from links */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer; 
+  transition: opacity 0.3s ease; /* transition for hover effect */
   z-index: 3; /* Ensure links are above the headercover */
 }
 
@@ -92,14 +92,18 @@ body {
 
 /* Fitness Cover Link */
 #fitnesslink {
-  top: 200px; /* Fixed position from the top */
+  top: 190px; /* Fixed position from the top */
   left: 520px; /* Fixed position from the left */
   transform: translate(-50%, -50%); /* Adjust alignment */
 }
 
+#fitnesslink img {
+  object-fit: contain; /* Maintain the full image without cropping */
+}
+
 /* Korea Cover Link */
 #korealink {
-  bottom: 160px; /* Fixed position from the bottom */
+  bottom: 140px; /* Fixed position from the bottom */
   left: 384px; /* Fixed position from the left */
   transform: translate(-50%, 0); /* Adjust alignment */
 }
@@ -117,3 +121,4 @@ body {
   left: 648px; /* Fixed position from the left */
   transform: translate(-50%, -50%); /* Adjust alignment */
 }
+
