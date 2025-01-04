@@ -103,6 +103,7 @@ pre{
   margin: 0 auto; /* Center the list */
   text-align: center; /* Center-align the text */
   font-family: 'oliver', 'laundry gothic', 'winkle', cursive;
+  font-size: 22px;
 }
 
 .articlelist li {
