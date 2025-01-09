@@ -17,7 +17,7 @@ body {
 
 /* Home Button Styling */
 .homebutton {
-  width: 100px; /* Adjust to desired size */
+  width: 100px; 
   height: auto; /* Maintains aspect ratio */
   cursor: pointer;
 }
@@ -94,7 +94,7 @@ p{
   padding-right: 70px;
   font-family: 'oliver', 'laundry gothic', 'annis handwriting', cursive;
   text-align: left;
-  font-size: 20px;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
 
@@ -102,7 +102,7 @@ pre{
   padding-left: 70px;
   font-family: 'oliver', 'laundry gothic', 'annis handwriting', cursive;
   text-align: left;
-  font-size: 20px;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
 
@@ -110,7 +110,7 @@ pre{
   padding-left: 70px;
   font-family: 'oliver', 'laundry gothic', 'annis handwriting', cursive;
   text-align: left;
-  font-size: 15px;
+  font-size: 0.9rem;
   line-height: 1.2;
 }
 
@@ -127,7 +127,7 @@ pre{
 
 #disclaimer{
   font-family: 'oliver', 'laundry gothic', 'annis handwriting', cursive;
-  font-size: 15px;
+  font-size: 0.9rem;
 }
 
 /*ARTICLE LIST STYLING**************************************************/
@@ -138,7 +138,7 @@ pre{
   margin: 0 auto; /* Center the list */
   text-align: center; /* Center-align the text */
   font-family: 'oliver', 'laundry gothic', 'winkle', cursive;
-  font-size: 22px;
+  font-size: 1.5rem;
   line-height: 1.2;
 }
 
@@ -163,7 +163,7 @@ pre{
 .back-link {
   text-decoration: none; 
   color: black; 
-  font-size: 18px; 
+  font-size: 1.4rem; 
   position: relative; /* Required for the ::after pseudo-element */
   transition: color 0.3s ease; 
   margin-left: 70px;
@@ -179,12 +179,134 @@ pre{
   transition: width 0.3s ease;
 }
 
-
-
 /* LDR APPS PICS styling********************************************/
 .LdrAppPics{
   margin-left: 70px;
-  width: 200px;
+  max-width: 20%;
   height: auto;
   display: block;
+}
+
+/* HORIZONTAL CONTAINER STACIKING STYLING ********************************/
+/* Flex container for side-by-side layout */
+.main-container {
+  display: flex;              /* Enables side-by-side layout */
+  justify-content: space-between; /* Adds space between the two containers */
+  margin-top: 40px;
+  padding: 20px;
+}
+
+/* Left side (text content) */
+.text-container {
+  width: 70%;                 /* Takes 70% of the container width */
+}
+
+/* Right side (images) */
+.image-container {
+  width: 30%;                 /* Takes 30% of the container width */
+  display: flex;
+  flex-direction: column;     /* Stacks images vertically */
+  gap: 150px;                  /* Adds space between images */
+  align-items: center;        
+}
+
+.image-example {
+  max-width: 100%;
+  height: auto;            
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;  /* Stacks the text and images vertically */
+  }
+  .text-container,
+  .image-container {
+    width: 80%;    /* Full width on mobile */
+  }
+}
+
+#MufflerImage{
+  transform: rotate(-20deg);
+}
+
+#OnePieceImage{
+  transform: rotate(15deg);
+}
+
+#WaterMeatImage{
+  transform: rotate(20deg);
+}
+
+#WindSmokeImage{
+  margin-left: -60%;
+}
+
+
+/* For smart phones */
+@media (max-width: 600px) {
+
+  .homebutton {
+    width: 60px;  /* Smaller width for mobile */
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+  p,
+  h2,
+  h4,
+  pre,
+  .romanization {
+    padding-left: 20px;  /* Reduce padding for small screens */
+    padding-right: 20px; /* Keep some breathing space */
+  }
+
+  .text-container,
+  .image-container {
+    width: 100%;  /* Full width on mobile */
+  }
+  
+  .image-example {
+    max-width: 90%;  /* Smaller images */
+  }
+
+  #MufflerImage,
+  #OnePieceImage,
+  #WaterMeatImage {
+    transform: rotate(0deg);  /* Remove rotation on mobile for better alignment */
+  }
+
+}
+
+/* For tablets */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .main-container {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .text-container {
+    width: 65%;
+  }
+  .image-container {
+    width: 35%;
+  }
+  .image-example {
+    max-width: 80%;
+  }
+}
+
+/* For desktop computers */
+@media screen and (min-width: 900px) {
+  .main-container {
+    gap: 40px;
+  }
+  .homebutton {
+    width: 120px;
+  }
+  .text-container {
+    width: 70%;
+  }
+  .image-container {
+    width: 30%;
+  }
 }

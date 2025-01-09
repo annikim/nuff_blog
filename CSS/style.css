@@ -12,113 +12,150 @@ body {
   align-items: center;
 }
 
-
 /* Wrapper for the heading and covers */
 .heading-container {
   position: relative;
-  width: 800px; /* Fixed width */
-  height: 800px; /* Fixed height */
-  margin: 0 auto; /* Center horizontally */
-  border-radius: 50%; /* Maintains circular boundary */
-  overflow: hidden; /* Ensures child elements don't overflow the container */
+  width: 80vw;  /* Responsive width (relative to viewport) */
+  height: 80vw; /* Responsive height to maintain circle */
+  max-width: 800px;  /* Maximum width for large screens */
+  max-height: 800px; /* Maximum height for large screens */
+  margin: 0 auto;
+  border-radius: 50%; /* Keeps circular shape */
+  overflow: hidden;
 }
 
-/* Center the header and make it larger */
+/* Center "NUFF SAID" heading */
 #headercover {
   position: absolute;
-  z-index: 2; /* Keeps the header on top */
-  width: 360px; /* Fixed width */
-  height: auto; /* Maintains aspect ratio */
-  top: 50%; /* Centers vertically */
-  left: 50%; /* Centers horizontally */
-  transform: translate(-50%, -50%); /* Centers the image precisely */
+  z-index: 2;
+  width: 40%;  /* Responsive size */
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/* Covers in fixed positions */
+/* Covers (images surrounding the header) */
 .cover {
-  width: 150px; /* Fixed width */
-  height: 150px; /* Fixed height to maintain square aspect ratio */
+  width: 18%;  /* Responsive width */
+  height: 18%;
   object-fit: contain;
 }
 
-/* Clickable Cover Links */
+/* Clickable cover links */
 .cover-link {
-  position: absolute; /* Position the link absolutely within the container */
-  width: 150px; /* Match the cover image width */
-  height: 150px; /* Match the cover image height */
-  text-decoration: none; /* Remove underline from links */
-  cursor: pointer; 
-  transition: opacity 0.3s ease; /* transition for hover effect */
-  z-index: 3; /* Ensure links are above the headercover */
+  position: absolute;
+  width: 18%;
+  height: 18%;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 3;
 }
 
-/* Ensure images inside links fill the links */
+/* Ensure hover and default images have the same size */
 .cover-link img {
-  display: block; /* Remove any inline spacing */
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* Hide hover images by default */
-.cover-link img.hover {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  width: 150px; /* Fixed width */
-  height: 150px; /* Fixed height to maintain square aspect ratio */
 }
 
-/* Show hover image on hover */
+/* Default image */
+.cover-link img.default {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover image hidden initially */
+.cover-link img.hover {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Swap images on hover */
 .cover-link:hover img.hover {
   opacity: 1;
 }
 
-/* Hide default image on hover */
 .cover-link:hover img.default {
   opacity: 0;
 }
 
-/* Specific placements for the cover links */
-
-/* College Cover Link */
+/* Positions for category links (calculated to maintain circular layout) */
 #collegelink {
-  top: 140px; /* Fixed position from the top */
-  left: 240px; /* Fixed position from the left */
-  transform: translate(-50%, 0); /* Adjust alignment */
+  top: 16%;
+  left: 40%;
+  transform: translate(-50%, 0);
 }
 
-/* Fitness Cover Link */
 #fitnesslink {
-  top: 190px; /* Fixed position from the top */
-  left: 520px; /* Fixed position from the left */
-  transform: translate(-50%, -50%); /* Adjust alignment */
+  top: 28%;
+  left: 75%;
+  transform: translate(-50%, -50%);
 }
 
-#fitnesslink img {
-  object-fit: contain; /* Maintain the full image without cropping */
-}
-
-/* Korea Cover Link */
 #korealink {
-  bottom: 140px; /* Fixed position from the bottom */
-  left: 384px; /* Fixed position from the left */
-  transform: translate(-50%, 0); /* Adjust alignment */
+  bottom: 16%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
-/* Self Cover Link */
 #selflink {
-  top: 380px; /* Fixed position from the top */
-  left: 120px; /* Fixed position from the left */
-  transform: translate(-50%, -50%); /* Adjust alignment */
+  top: 48%;
+  left: 15%;
+  transform: translate(-50%, -50%);
 }
 
-/* Nutrition Cover Link */
 #nutritionlink {
-  bottom: 240px; /* Fixed position from the bottom */
-  left: 648px; /* Fixed position from the left */
-  transform: translate(-50%, -50%); /* Adjust alignment */
+  bottom: 25%;
+  left: 80%;
+  transform: translate(-50%, -50%);
 }
 
+/* Responsive for mobile screens */
+@media (max-width: 768px) {
+  .heading-container {
+    width: 90vw;  /* Slightly larger for smaller screens */
+    height: 90vw;
+  }
+
+  #headercover {
+    width: 50%;  /* Larger text center for mobile */
+  }
+
+  .cover-link {
+    width: 22%;  /* Increase clickable area */
+    height: 22%;
+  }
+}
+
+/* Responsive for very small devices */
+@media (max-width: 480px) {
+  .cover-link {
+    width: 26%;
+    height: 26%;
+  }
+
+  #headercover {
+    width: 60%;
+  }
+}
+
+/* Responsive for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .heading-container {
+    width: 85vw;
+    height: 85vw;
+  }
+
+  .cover-link {
+    width: 20%;
+    height: 20%;
+  }
+
+  #headercover {
+    width: 45%;
+  }
+}
