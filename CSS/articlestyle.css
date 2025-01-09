@@ -70,7 +70,6 @@ body {
 
 h1{
   font-family: 'oliver', 'winkle', 'annis handwriting', cursive;
-  font-size: 37px;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -79,13 +78,20 @@ h1{
 }
 
 h2{
-  margin-left: 70px;
+  padding-left: 70px;
   font-family: 'oliver', 'laundry gothic', 'winkle', 'annis handwriting', cursive;
-  line-height: 1.5;
+  line-height: 1.0;
+}
+
+h4{
+  padding-left: 70px;
+  font-family: 'oliver', 'laundry gothic', 'winkle', 'annis handwriting', cursive;
+  line-height: 1.0;
 }
 
 p{
-  margin-left: 70px;
+  padding-left: 70px;
+  padding-right: 70px;
   font-family: 'oliver', 'laundry gothic', 'annis handwriting', cursive;
   text-align: left;
   font-size: 20px;
@@ -93,12 +99,37 @@ p{
 }
 
 pre{
-  margin-left: 70px;
+  padding-left: 70px;
   font-family: 'oliver', 'laundry gothic', 'annis handwriting', cursive;
   text-align: left;
   font-size: 20px;
   line-height: 1.5;
 }
+
+.romanization{
+  padding-left: 70px;
+  font-family: 'oliver', 'laundry gothic', 'annis handwriting', cursive;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.links{
+  font-family: 'oliver', 'laundry gothic', 'annis handwriting', cursive;
+  text-align: left;  
+}
+
+.links a:hover{
+  font-family: 'oliver', 'laundry gothic', 'annis handwriting', cursive;
+  text-align: left;  
+  cursor: pointer;
+}
+
+#disclaimer{
+  font-family: 'oliver', 'laundry gothic', 'annis handwriting', cursive;
+  font-size: 15px;
+}
+
 /*ARTICLE LIST STYLING**************************************************/
 .articlelist {
   justify-content: center;
@@ -146,4 +177,14 @@ pre{
   text-decoration: underline; 
   cursor: pointer;
   transition: width 0.3s ease;
+}
+
+
+
+/* LDR APPS PICS styling********************************************/
+.LdrAppPics{
+  margin-left: 70px;
+  width: 200px;
+  height: auto;
+  display: block;
 }
