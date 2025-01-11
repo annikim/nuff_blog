@@ -187,6 +187,13 @@ pre{
   display: block;
 }
 
+.EatingHealthyInDorms{
+  margin-left: 70px;
+  max-width: 20%;
+  height: auto;
+  display: in-line block;
+}
+
 /* HORIZONTAL CONTAINER STACIKING STYLING ********************************/
 /* Flex container for side-by-side layout */
 .main-container {
