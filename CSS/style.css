@@ -15,12 +15,12 @@ body {
 /* Wrapper for the heading and covers */
 .heading-container {
   position: relative;
-  width: 80vw;  /* Responsive width (relative to viewport) */
-  height: 80vw; /* Responsive height to maintain circle */
+  width: 90vw;  /* Responsive width (relative to viewport) */
+  height: 90vw; /* Responsive height to maintain circle */
   max-width: 800px;  /* Maximum width for large screens */
   max-height: 800px; /* Maximum height for large screens */
   margin: 0 auto;
-  border-radius: 50%; /* Keeps circular shape */
+  border-radius: 60%; /* Keeps circular shape */
   overflow: hidden;
 }
 
@@ -65,13 +65,13 @@ body {
 /* Default image */
 .cover-link img.default {
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
 }
 
 /* Hover image hidden initially */
 .cover-link img.hover {
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
 }
 
 /* Swap images on hover */
@@ -92,7 +92,7 @@ body {
 
 #fitnesslink {
   top: 28%;
-  left: 75%;
+  left: 79%;
   transform: translate(-50%, -50%);
 }
 
@@ -110,36 +110,125 @@ body {
 
 #nutritionlink {
   bottom: 25%;
-  left: 80%;
+  left: 85%;
   transform: translate(-50%, -50%);
 }
 
+
+
 /* Responsive for mobile screens */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .heading-container {
     width: 90vw;  /* Slightly larger for smaller screens */
     height: 90vw;
   }
 
   #headercover {
-    width: 50%;  /* Larger text center for mobile */
+    width: 35%;  /* Larger text center for mobile */
   }
 
   .cover-link {
     width: 22%;  /* Increase clickable area */
     height: 22%;
   }
+
+  #collegelink {
+    top: 10%;
+    left: 40%;
+    transform: translate(-50%, 0);
+  }
+  
+  #fitnesslink {
+    top: 28%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #korealink {
+    bottom: 16%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  
+  #selflink {
+    top: 48%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #nutritionlink {
+    bottom: 25%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
+  
 }
 
 /* Responsive for very small devices */
 @media (max-width: 480px) {
   .cover-link {
-    width: 26%;
-    height: 26%;
+    width: 24%;
+    height: 24%;
   }
 
-  #headercover {
-    width: 60%;
+  /* Wrapper for the heading and covers */
+.heading-container {
+  position: relative;
+  width: 90vw;  /* Responsive width (relative to viewport) */
+  height: 90vw; /* Responsive height to maintain circle */
+  max-width: 800px;  /* Maximum width for large screens */
+  max-height: 800px; /* Maximum height for large screens */
+  margin: 0 auto;
+  border-radius: 60%; /* Keeps circular shape */
+  overflow: hidden;
+}
+
+/* Center "NUFF SAID" heading */
+#headercover {
+  position: absolute;
+  z-index: 2;
+  width: 43%;  /* Responsive size */
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Covers (images surrounding the header) */
+.cover {
+  width: 18%;  /* Responsive width */
+  height: 18%;
+  object-fit: contain;
+}
+
+  #collegelink {
+    top: 10%;
+    left: 32%;
+    transform: translate(-50%, 0);
+  }
+  
+  #fitnesslink {
+    top: 20%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #korealink {
+    bottom: 8%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  
+  #selflink {
+    top: 48%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #nutritionlink {
+    bottom: 20%;
+    left: 82%;
+    transform: translate(-50%, -50%);
   }
 }
 
