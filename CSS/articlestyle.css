@@ -74,7 +74,7 @@ h1{
   display: flex;
   justify-content: center;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1;
 }
 
 h2{
@@ -195,7 +195,7 @@ pre{
 
 .EatingHealthyInDorms{
   margin-left: 70px;
-  max-width: 20%;
+  max-width: 40%;
   height: auto;
   display: in-line block;
 }
@@ -255,7 +255,7 @@ pre{
 }
 
 
-/* For smart phones */
+/* For smart phones ***************************************/
 @media (max-width: 600px) {
 
   .homebutton {
@@ -280,15 +280,21 @@ pre{
   }
   
   .image-example {
-    max-width: 90%;  /* Smaller images */
+    max-width: 100%;  /* Smaller images */
   }
 
-  #MufflerImage,
-  #OnePieceImage,
-  #WaterMeatImage {
-    transform: rotate(0deg);  /* Remove rotation on mobile for better alignment */
+  .EatingHealthyInDorms{
+    margin-left: 70px;
+    max-width: 40%;
+    height: auto;
+    display: in-line block;
   }
 
+  .back-link {
+    margin-left: 20px;
+    line-height: 0;
+    font-size: 0.8rem;
+  }
 }
 
 /* For tablets */
