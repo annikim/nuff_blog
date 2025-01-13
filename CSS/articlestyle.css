@@ -200,7 +200,7 @@ pre{
   display: in-line block;
 }
 
-/* HORIZONTAL CONTAINER STACIKING STYLING ********************************/
+/* HORIZONTAL CONTAINER STACKING STYLING ********************************/
 /* Flex container for side-by-side layout */
 .main-container {
   display: flex;              /* Enables side-by-side layout */
@@ -295,21 +295,27 @@ pre{
     line-height: 0;
     font-size: 0.8rem;
   }
+
+  .image-example{
+    display: none;
+  }
+
+
 }
 
 /* For tablets */
 @media screen and (min-width: 600px) and (max-width: 900px) {
   .main-container {
-    flex-direction: column;
+    flex-direction: row;
   }
   .text-container {
-    width: 65%;
+    width: 60%;
   }
   .image-container {
-    width: 35%;
+    width: 40%;
   }
   .image-example {
-    max-width: 80%;
+    max-width: 60%;
   }
 }
 
