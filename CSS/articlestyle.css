@@ -83,6 +83,12 @@ h2{
   line-height: 1.0;
 }
 
+h3{
+   padding-left: 70px;
+  font-family: 'oliver', 'laundry gothic', 'winkle', 'annis handwriting', cursive;
+  line-height: 1.0;
+}
+
 h4{
   padding-left: 70px;
   font-family: 'oliver', 'laundry gothic', 'winkle', 'annis handwriting', cursive;
@@ -228,7 +234,7 @@ pre{
   }
   .text-container,
   .image-container {
-    width: 80%;    /* Full width on mobile */
+    width: 80%; 
   }
 }
 
@@ -270,7 +276,7 @@ pre{
 
   .text-container,
   .image-container {
-    width: 100%;  /* Full width on mobile */
+    width: 80%;  /* Full width on mobile */
   }
   
   .image-example {
@@ -288,8 +294,7 @@ pre{
 /* For tablets */
 @media screen and (min-width: 600px) and (max-width: 900px) {
   .main-container {
-    flex-direction: row;
-    gap: 10px;
+    flex-direction: column;
   }
   .text-container {
     width: 65%;
