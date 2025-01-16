@@ -31,6 +31,26 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'karla';
+  src: url('fonts/Karla-Regular.woff2') format('woff2'),
+      url('fonts/Karla-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('fonts/Poppins-Regular.woff2') format('woff2'),
+      url('fonts/Poppins-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 @font-face {
   font-family: 'geologica';
   src: url('fonts/Geologica-Regular.woff2') format('woff2'),
@@ -98,7 +118,7 @@ h4{
 p{
   padding-left: 70px;
   padding-right: 70px;
-  font-family: 'oliver', 'laundry gothic', 'annis handwriting', cursive;
+  font-family: 'poppins', 'karla', 'oliver', 'laundry gothic', 'annis handwriting', cursive;
   text-align: left;
   font-size: 1.1rem;
   line-height: 1.5;
@@ -112,6 +132,13 @@ pre{
   line-height: 1.5;
 }
 
+li{
+  margin-left: 70px;
+  font-family: 'poppins', 'karla', 'oliver', 'laundry gothic', 'annis handwriting', cursive;
+  line-height: 2.5;
+  list-style-type: none;
+}
+
 .romanization{
   padding-left: 70px;
   font-family: 'oliver', 'laundry gothic', 'annis handwriting', cursive;
@@ -121,8 +148,14 @@ pre{
 }
 
 .links{
-  font-family: 'oliver', 'laundry gothic', 'annis handwriting', cursive;
+  font-family: 'poppins', 'karla', 'oliver', 'laundry gothic', 'annis handwriting', cursive;
   text-align: left;  
+}
+
+
+.sources{
+  font-family: 'poppins', 'karla', 'oliver', 'laundry gothic', 'annis handwriting', cursive;
+  margin-left: 70px;
 }
 
 .links a:hover{
@@ -146,10 +179,6 @@ pre{
   font-family: 'oliver', 'laundry gothic', 'winkle', cursive;
   font-size: 1.5rem;
   line-height: 1.2;
-}
-
-.articlelist li {
-  margin: 10px 0; /* spacing between items */
 }
 
 .articlelist a {
@@ -184,6 +213,102 @@ pre{
   cursor: pointer;
   transition: width 0.3s ease;
 }
+
+
+/*ANCHOR LINKS STYLING***************************************************************************/
+/* ANCHOR LINKS CONTAINER */
+.anchorlinks {
+  display: flex; /* Align items side-by-side */
+  flex-wrap: wrap; /* Ensure it wraps to the next row if the screen size is small */
+  gap: 0; /* Add spacing between the columns */
+  line-height: 0;
+  justify-content: space-around; /* Ensures equal spacing around columns */
+  margin-right: 70px;
+}
+
+/* COLUMNS STYLING ***********************************************/
+.anchorcolumn {
+  flex: 1 1 170px; /* Each column takes up a minimum of 170px and grows to fill available space */
+  text-align: center;
+  width: 100%;
+}
+
+.anchorcolumn h4 {
+  font-family: 'oliver';
+  color: rgb(107, 107, 161);
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+  text-align: center;
+  padding: 0 0;
+}
+
+.anchorlinks ul {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.anchorlinks li {
+  margin-bottom: 0rem; /* Space between each link */
+  margin-left: 0;
+  line-height: 1.8;
+  text-align: center;
+  width: 100%;
+}
+
+
+.anchorlinks a {
+  font-family: 'oliver';
+  font-size: 1.1rem;
+  color: black;
+  text-decoration: none;
+  border-bottom: 0.1rem solid transparent;
+  transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
+  padding-bottom: 0px;
+}
+
+.anchorlinks a:hover {
+  color: rgb(140, 140, 198);
+  border-bottom-color: rgb(140, 140, 198);
+  cursor: pointer;
+}
+
+
+/*back to top button***********************************************/
+
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 1;
+  background-color: rgb(140, 140, 198);
+  color: black;
+  border: 2px solid black; 
+  padding: 0.8% 0.8%;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'oliver', 'karla', 'poppin', serif;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/*arrow animation */
+
+#backToTopBtn::before {
+  content: '\2191'; /* Unicode character for an arrow pointing up */
+  display: inline-block;
+  font-size: 17px; /*making the arrow bigger*/
+  margin-right: 8px; /* Adjust spacing between text and arrow */
+  transition: transform 0.4s ease-in-out;
+}
+
+#backToTopBtn:hover::before {
+  transform: translateY(-4px); /* Move the arrow up a bit on hover */
+}
+
 
 /* LDR APPS PICS styling********************************************/
 .LdrAppPics{
@@ -265,14 +390,22 @@ pre{
   .main-container {
     flex-direction: column;
   }
+  
   p,
   h2,
   h4,
   pre,
+  li,
   .romanization {
     padding-left: 20px;  /* Reduce padding for small screens */
     padding-right: 20px; /* Keep some breathing space */
   }
+
+  .anchorsection{
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
 
   .text-container,
   .image-container {
@@ -317,6 +450,11 @@ pre{
   .image-example {
     max-width: 60%;
   }
+
+  .anchorlinks{
+    padding-right: 10px;
+  }
+
 }
 
 /* For desktop computers */
