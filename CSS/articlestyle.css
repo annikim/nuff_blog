@@ -22,6 +22,7 @@ body {
   cursor: pointer;
 }
 
+
 /*FONTS******************************************************************/
 @font-face {
   font-family: 'oliver';
@@ -284,7 +285,7 @@ li{
   bottom: 5%;
   right: 5%;
   z-index: 1;
-  background-color: rgb(140, 140, 198);
+  background-color: rgb(193, 193, 226);
   color: black;
   border: 2px solid black; 
   padding: 0.8% 0.8%;
@@ -438,6 +439,7 @@ li{
 
 /* For tablets */
 @media screen and (min-width: 600px) and (max-width: 900px) {
+
   .main-container {
     flex-direction: row;
   }
