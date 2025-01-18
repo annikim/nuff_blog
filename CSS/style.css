@@ -1,26 +1,28 @@
 /* Background settings for the body */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full viewport height */
-  margin: 0;
-  background-image: url('../images/paperbackground.jpeg');
+  background-image: url('../images/paperbackground.jpeg'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden; /* Prevents scrolling if content overflows */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Wrapper for the heading and covers */
 .heading-container {
   position: relative;
-  width: 90%;  
-  height: auto; 
+  width: 90vw;  /* Responsive width (relative to viewport) */
+  height: 90vw; /* Responsive height to maintain circle */
   max-width: 800px;  /* Maximum width for large screens */
   max-height: 800px; /* Maximum height for large screens */
   margin: 0 auto;
   border-radius: 60%; /* Keeps circular shape */
   overflow: hidden;
+  z-index: 2;
 }
 
 /* Center "NUFF SAID" heading */
@@ -117,31 +119,30 @@ body {
 
 /*SOCIALS*************************************************************************************************/
 .socials {
-  margin-top: auto; /* Push the section to the bottom */
-  text-align: center; /* Center the icons */
+  margin-top: auto;
+  bottom: 0;
   padding: 10px 0; /* Optional: Add some padding */
-  margin-right: 20px;
+  z-index: 1;
+  position: absolute;
+  left: 88%;
 }
 
-/* Remove any default styles from the links */
+
 .socials a {
   text-decoration: none;
   margin: 0 2px; /* Add spacing between icons */
 }
 
-/* Style the images to be small and uniform */
 .socials img {
   width: 30px; /* Adjust icon size */
   height: 30px; /* Keep aspect ratio consistent */
-  
+  display: inline-block;
   transition: transform 0.3s ease;
 }
 
-/* Add a hover effect for the icons */
 .socials img:hover {
   transform: scale(1.2); /* Slight zoom on hover */
 }
-
 
 /* Responsive for mobile screens *******************************************************************************************************/
 @media (max-width: 800px) {
@@ -233,8 +234,8 @@ body {
 
 /* Covers (images surrounding the header) */
 .cover {
-  width: 18%;  /* Responsive width */
-  height: 18%;
+  width: 12%;  /* Responsive width */
+  height: 12%;
   object-fit: contain;
 }
 
@@ -268,9 +269,13 @@ body {
     transform: translate(-50%, -50%);
   }
 
+  .socials {
+    left: 70%;
+  }
+
   .socials img {
-    width: 20px; /* Adjust icon size */
-    height: 20px; /* Keep aspect ratio consistent */
+    width: 15px; /* Adjust icon size */
+    height: 15px; /* Keep aspect ratio consistent */
   }
 }
 
@@ -291,7 +296,11 @@ body {
   }
 
   .socials img {
-    width: 20px; /* Adjust icon size */
-    height: 20px; /* Keep aspect ratio consistent */
+    width: 25px; /* Adjust icon size */
+    height: 25px; /* Keep aspect ratio consistent */
+  }
+
+  .socials{
+    left: 83%;
   }
 }
