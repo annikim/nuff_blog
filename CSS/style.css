@@ -6,7 +6,7 @@ body {
   background-attachment: fixed;
   margin: 0;
   height: 100vh;
-  overflow: hidden; /* Prevents scrolling if content overflows */
+  overflow: auto; /* Prevents scrolling if content overflows */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,8 +20,8 @@ body {
   max-width: 800px;  /* Maximum width for large screens */
   max-height: 800px; /* Maximum height for large screens */
   margin: 0 auto;
-  border-radius: 60%; /* Keeps circular shape */
-  overflow: hidden;
+  border-radius: 60%; /*circular shape */
+  overflow: visible; /* Ensure visibility */
   z-index: 2;
 }
 
@@ -119,12 +119,12 @@ body {
 
 /*SOCIALS*************************************************************************************************/
 .socials {
-  margin-top: auto;
-  bottom: 0;
-  padding: 10px 0; /* Optional: Add some padding */
-  z-index: 1;
   position: absolute;
-  left: 88%;
+  bottom: 10px; /* Keeps it near the bottom */
+  left: 50%; /* Centers it horizontally */
+  transform: translateX(-50%); /* Adjusts for centering */
+  z-index: 1;
+  padding: 10px 0;
 }
 
 
@@ -195,6 +195,12 @@ body {
     height: 10px; /* Keep aspect ratio consistent */
   }
   
+  .socials {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
 }
 
 /* Responsive for very small devices */
@@ -218,7 +224,7 @@ body {
   max-height: 800px; /* Maximum height for large screens */
   margin: 0 auto;
   border-radius: 60%; /* Keeps circular shape */
-  overflow: hidden;
+
 }
 
 /* Center "NUFF SAID" heading */
@@ -300,7 +306,9 @@ body {
     height: 25px; /* Keep aspect ratio consistent */
   }
 
-  .socials{
-    left: 83%;
+  .socials {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
