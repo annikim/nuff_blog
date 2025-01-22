@@ -87,6 +87,17 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'nanum square';
+  src: url('fonts/NanumSquareNeoTTF-bRg.woff2') format('woff2'),
+      url('fonts/NanumSquareNeoTTF-bRg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /*********************************************************************************/
 
 h1{
@@ -96,18 +107,22 @@ h1{
   justify-content: center;
   text-align: center;
   line-height: 1;
+  font-weight: 500;
 }
 
 h2{
   padding-left: 70px;
   font-family: 'oliver', 'laundry gothic', 'winkle', 'annis handwriting', cursive;
   line-height: 1.0;
+  font-weight: 400;
 }
 
 h3{
-   padding-left: 70px;
+  padding-left: 70px;
   font-family: 'oliver', 'laundry gothic', 'winkle', 'annis handwriting', cursive;
   line-height: 1.0;
+  font-weight: 100;
+
 }
 
 h4{
@@ -119,7 +134,7 @@ h4{
 p{
   padding-left: 70px;
   padding-right: 70px;
-  font-family: 'poppins', 'karla', 'oliver', 'laundry gothic', 'annis handwriting', cursive;
+  font-family: 'poppins', 'karla', 'nanum square', cursive;
   text-align: left;
   font-size: 1.1rem;
   line-height: 1.5;
@@ -127,7 +142,7 @@ p{
 
 pre{
   padding-left: 70px;
-  font-family: 'oliver', 'laundry gothic', 'annis handwriting', cursive;
+  font-family: 'poppins', 'karla', 'nanum square', 'laundry gothic', 'annis handwriting', cursive;
   text-align: left;
   font-size: 1.1rem;
   line-height: 1.5;
@@ -137,6 +152,25 @@ li{
   font-family: 'poppins', 'karla', 'oliver', 'laundry gothic', 'annis handwriting', cursive;
   line-height: 2.5;
   list-style-type: none;
+}
+
+.articlelists{
+  margin-left: 70px;
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(36, 130, 50);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(43, 168, 74);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(206, 160, 174);
 }
 
 .romanization{
@@ -207,8 +241,8 @@ li{
 
 /* Hover effect for the link */
 .back-link:hover {
-  color: #69b985; /* Darken the color on hover */
-  color: #45a95f; 
+  color: rgb(43, 168, 74); /* Darken the color on hover */
+  color: rgb(206, 160, 174); 
   text-decoration: underline; 
   cursor: pointer;
   transition: width 0.3s ease;
@@ -284,9 +318,9 @@ li{
   bottom: 5%;
   right: 5%;
   z-index: 1;
-  background-color: rgb(193, 193, 226);
-  color: black;
-  border: 2px solid black; 
+  background-color: rgb(245, 183, 0);
+  color: rgb(62, 53, 53);
+  border: 2px solid rgb(62, 53, 53); 
   padding: 0.8% 0.8%;
   cursor: pointer;
   font-weight: bold;
@@ -309,6 +343,47 @@ li{
   transform: translateY(-4px); /* Move the arrow up a bit on hover */
 }
 
+/*CODE STYLING *********************************************/
+.code-container {
+  position: relative; /* For positioning the Copy button */
+  margin: 1em 0; /* Add vertical spacing */
+}
+
+/* Styling for <pre> blocks */
+pre {
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 15px; /* Add padding inside the code block */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 5px; /* Rounded corners */
+  overflow-x: auto; /* Enable horizontal scrolling for long lines */
+  font-family: "Courier New", Courier, monospace; /* Monospace font */
+  font-size: 0.9rem; /* Slightly smaller font size */
+  white-space: pre-wrap; /* Wrap long lines */
+  line-height: 1.5; /* Improve readability */
+  margin: 0; /* Remove default margin */
+}
+
+/* Style for the Copy button */
+.copy-button {
+  position: absolute; /* Positioned relative to the container */
+  font-family: 'poppins', 'karla', serif;
+  top: 10px; /* Place at the top-right corner */
+  right: 10px;
+  background-color: rgb(245, 183, 0); 
+  color: black; 
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  opacity: 0.8; /* Slightly transparent */
+  transition: opacity 0.2s;
+}
+
+/* Hover effect for the Copy button */
+.copy-button:hover {
+  opacity: 1; /* Fully opaque on hover */
+}
 
 /* LDR APPS PICS styling********************************************/
 .LdrAppPics{
@@ -361,24 +436,35 @@ li{
   .image-container {
     width: 80%; 
   }
-}
 
-#MufflerImage{
-  transform: rotate(-20deg);
-}
+    #MufflerImage{
+      transform: rotate(-20deg);
+    }
 
-#OnePieceImage{
-  transform: rotate(15deg);
-}
+    #OnePieceImage{
+      transform: rotate(15deg);
+    }
 
-#WaterMeatImage{
-  transform: rotate(20deg);
-}
+    #WaterMeatImage{
+      transform: rotate(20deg);
+    }
 
-#WindSmokeImage{
-  margin-left: -60%;
-}
+    #WindSmokeImage{
+      margin-left: -60%;
+    }
 
+    h1{
+      font-weight: 700;
+    }
+
+    h2{
+      font-weight: 700;
+    }
+
+    h2{
+      font-weight: 700;
+    }
+}
 
 /* For smart phones ***************************************/
 @media (max-width: 600px) {
@@ -396,9 +482,18 @@ li{
   h4,
   pre,
   li,
-  .romanization {
+  .romanization,
+  .articlelists {
     padding-left: 20px;  /* Reduce padding for small screens */
     padding-right: 20px; /* Keep some breathing space */
+  }
+
+  h1{
+    font-weight: 600;
+  }
+
+  h2{
+    font-weight: 600;
   }
 
   .anchorsection{

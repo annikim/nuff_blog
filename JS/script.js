@@ -23,3 +23,20 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     
   });
+
+  // Add event listeners to all "Copy" buttons
+document.querySelectorAll('.copy-button').forEach(button => {
+  button.addEventListener('click', () => {
+    // Find the <code> element inside the same container
+    const codeBlock = button.previousElementSibling.querySelector('code');
+    const codeText = codeBlock.textContent;
+
+    // Copy the code text to the clipboard
+    navigator.clipboard.writeText(codeText).then(() => {
+      button.textContent = 'Copied!';
+      setTimeout(() => {
+        button.textContent = 'Copy';
+      }, 2000); // Reset text after 2 seconds
+    });
+  });
+});
