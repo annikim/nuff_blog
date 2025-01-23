@@ -140,6 +140,10 @@ p{
   line-height: 1.5;
 }
 
+p.strong{
+  font-weight: 100;
+}
+
 pre{
   padding-left: 70px;
   font-family: 'poppins', 'karla', 'nanum square', 'laundry gothic', 'annis handwriting', cursive;
@@ -323,7 +327,7 @@ a:hover {
   border: 2px solid rgb(62, 53, 53); 
   padding: 0.8% 0.8%;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 16px;
   font-family: 'oliver', 'karla', 'poppin', serif;
   transition: opacity 0.5s ease-in-out;
@@ -347,6 +351,8 @@ a:hover {
 .code-container {
   position: relative; /* For positioning the Copy button */
   margin: 1em 0; /* Add vertical spacing */
+  margin-left: 70px;
+  margin-right: 70px;
 }
 
 /* Styling for <pre> blocks */
@@ -363,7 +369,6 @@ pre {
   margin: 0; /* Remove default margin */
 }
 
-/* Style for the Copy button */
 .copy-button {
   position: absolute; /* Positioned relative to the container */
   font-family: 'poppins', 'karla', serif;
@@ -391,6 +396,13 @@ pre {
   max-width: 20%;
   height: auto;
   display: block;
+}
+
+.generalpics{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70%;
 }
 
 .EatingHealthyInDorms{
@@ -511,6 +523,10 @@ pre {
     max-width: 100%;  /* Smaller images */
   }
 
+  .generalpics{
+    width: 50%;
+  }
+
   .EatingHealthyInDorms{
     margin-left: 70px;
     max-width: 40%;
@@ -526,6 +542,13 @@ pre {
 
   .image-example{
     display: none;
+  }
+
+  .code-container {
+    position: relative; /* For positioning the Copy button */
+    margin: 1em 0; /* Add vertical spacing */
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
 
