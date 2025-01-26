@@ -190,6 +190,9 @@ a:hover {
   text-align: left;  
 }
 
+#generallinks{
+  margin-left: 70px;
+}
 
 .sources{
   font-family: 'poppins', 'karla', 'oliver', 'laundry gothic', 'annis handwriting', cursive;
